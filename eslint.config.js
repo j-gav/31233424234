@@ -1,5 +1,6 @@
 import js from '@eslint/js'
 import pluginVue from 'eslint-plugin-vue'
+import globals from 'globals';
 
 export default [
   {
@@ -16,10 +17,11 @@ export default [
   ...pluginVue.configs['flat/recommended'],
 
   {
-    env: {
-      node: true,
-      browser: true,
-      es2021: true,
+    languageOptions: {
+      ecmaVersion: 2021,
+      globals: {
+        ...globals.node
+      },
     },
     rules: {
       'vue/multi-word-component-names': 'off',
