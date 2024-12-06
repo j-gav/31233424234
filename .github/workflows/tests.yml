@@ -23,7 +23,6 @@ jobs:
 
       - name: Run ESLint
         run: npm run lint
-        continue-on-error: true
 
       - name: Run Vitest
         run: npm run ci-test
