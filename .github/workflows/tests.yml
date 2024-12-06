@@ -3,7 +3,7 @@ name: CI Tests
 on:
   pull_request:
     branches:
-      - '**'
+      - "**"
 
 jobs:
   test:
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: "18"
 
       - name: Install dependencies
         run: npm i
@@ -43,6 +43,7 @@ jobs:
         with:
           name: Test Results
           path: |
-            junit-vitest-results.xml
-            junit-playwright-results.xml
+            test-results/.last-run.xml
+            unit-test-results/test-output.xml
           reporter: junit
+          fail-on-error: true
