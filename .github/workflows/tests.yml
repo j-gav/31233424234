@@ -39,5 +39,5 @@ jobs:
         with:
           name: test-results
           path: |
-            test-results/.last-run.xml
-            unit-test-results/test-output.xml
+            test-results/.last-run.json
+            unit-test-results/test-output.json
