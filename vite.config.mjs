@@ -18,10 +18,7 @@ export default defineConfig({
     }),
     // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#readme
     Vuetify({
-      autoImport: true,
-      styles: {
-        configFile: 'src/styles/settings.scss',
-      },
+      autoImport: true
     }),
     Components(),
     ViteFonts({
@@ -58,4 +55,18 @@ export default defineConfig({
       },
     },
   },
+  test: {
+    setupFiles: './tests/vitest.setup.js',
+    globals: true,
+    environment: 'jsdom',
+    coverage: {
+      provider: 'istanbul',
+      reporter: ['text', 'json', 'html']
+    },
+    server: {
+      deps: {
+        inline: ['vuetify'],
+      },
+    },
+  }
 })

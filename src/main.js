@@ -1,17 +1,10 @@
-/**
- * main.js
- *
- * Bootstraps Vuetify and other plugins then mounts the App`
- */
-
-// Plugins
 import { registerPlugins } from '@/plugins'
-
-// Components
 import App from './App.vue'
-
-// Composables
 import { createApp } from 'vue'
+import TimeAgo from 'javascript-time-ago'
+import en from 'javascript-time-ago/locale/en'
+
+TimeAgo.addDefaultLocale(en)
 
 const app = createApp(App)
 
