@@ -25,7 +25,7 @@ jobs:
         run: npm run ci-test
 
       - name: Run Playwright
-        run: ci-test:e2e
+        run: npm run ci-test:e2e
 
       - name: Upload test results
         uses: actions/upload-artifact@v3
