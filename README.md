@@ -22,19 +22,20 @@
 - Run `npm run test`
 - Coverage is visible in the `coverage` directory
 
-### Running e2e tests (TODO)
+### Running e2e tests
 - Install Playwright `npx playwright install`
 - Run `npm run test:e2e`
 - Results will appear in console, report can be viewed after by running `npx playwright show-report`
 
-### Running linter (TODO)
-- add description around eslint
+### Running linter
+- Run `npm run lint`
+- Results will appear in console
 
 ### Running spellcheck (TODO)
 - add description around cspell
 
-### Contributing (TODO)
-- Open a PR to the master branch
+### Contributing
+- Open a PR to the main branch
 - Populate the checklist provided
 - All GitHub checks will then run, e.g. tests, linter and spellcheck
-- PRs must pass all checks
+- PRs must pass all checks to be considered for merge
