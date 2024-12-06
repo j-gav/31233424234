@@ -1,7 +1,7 @@
 <template>
   <AppHeader :view-mode="viewMode" @change-view="changeView" @refresh="refresh" />
   <Loader v-if="isLoading" />
-  <StoryList @change-type="updateStoryType" v-else :view-mode="viewMode" :type-of-stories="storyType" :stories="stories" />
+  <StoryList v-else :view-mode="viewMode" :type-of-stories="storyType" :stories="stories" />
 </template>
 
 <script setup>
