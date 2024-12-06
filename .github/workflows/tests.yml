@@ -3,7 +3,7 @@ name: CI Tests
 on:
   pull_request:
     branches:
-      - '**'
+      - "**"
 
 jobs:
   test:
@@ -16,30 +16,28 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: "18"
 
       - name: Install dependencies
         run: npm i
 
+      - name: Run ESLint
+        run: npm run lint
+
       - name: Run Vitest
         run: npm run ci-test
 
+      - name: Install Playwright
+        run: npx playwright install
+
       - name: Run Playwright
-        run: ci-test:e2e
+        run: npm run ci-test:e2e
 
       - name: Upload test results
+        if: always()
         uses: actions/upload-artifact@v3
         with:
           name: test-results
           path: |
-            test-results/.last-run.xml
-            unit-test-results/test-output.xml
-
-      - name: Annotate Test Results
-        uses: dorny/test-reporter@v1
-        with:
-          name: Test Results
-          path: |
-            junit-vitest-results.xml
-            junit-playwright-results.xml
-          reporter: junit
+            test-results/.last-run.json
+            unit-test-results/test-output.json

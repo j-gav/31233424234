@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "test": "vitest run --coverage --coverage.enabled=true",
     "test:e2e": "playwright test --reporter=html",
-    "lint": "eslint . --fix"
+    "lint": "eslint .  --max-warnings=0"
   },
   "dependencies": {
     "@mdi/font": "7.4.47",
