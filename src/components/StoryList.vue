@@ -25,7 +25,7 @@
   const visibleStories = ref([]);
   const selectedType = ref(props.typeOfStories);
   const hasMore = ref(true);
-  const initialAmountOfStories = 12;
+  const initialAmountOfStories = 15;
   const storiesOnEachLoad = 3;
   let currentPage = 0;
 
