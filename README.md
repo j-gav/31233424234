@@ -23,7 +23,9 @@
 - Coverage is visible in the `coverage` directory
 
 ### Running e2e tests (TODO)
-- add description around Playwright
+- Install Playwright `npx playwright install`
+- Run `npm run test:e2e`
+- Results will appear in console, report can be viewed after by running `npx playwright show-report`
 
 ### Running linter (TODO)
 - add description around eslint

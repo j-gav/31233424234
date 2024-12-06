@@ -16,6 +16,11 @@ export default [
   ...pluginVue.configs['flat/recommended'],
 
   {
+    env: {
+      node: true,
+      browser: true,
+      es2021: true,
+    },
     rules: {
       'vue/multi-word-component-names': 'off',
       'vue/singleline-html-element-content-newline': 'off',

@@ -4,10 +4,13 @@
   "type": "module",
   "version": "0.0.0",
   "scripts": {
+    "ci-test:e2e": "playwright test --reporter=junit",
+    "ci-test": "vitest run --coverage --coverage.enabled=true --reporter junit --outputFile=unit-test-results/test-output.json",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run --coverage --coverage.enabled=true",
+    "test:e2e": "playwright test --reporter=html",
     "lint": "eslint . --fix"
   },
   "dependencies": {
@@ -19,6 +22,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.14.0",
+    "@playwright/test": "^1.49.0",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vitest/coverage-istanbul": "^2.1.8",
     "@vue/test-utils": "^2.4.6",
@@ -30,6 +34,7 @@
     "eslint-plugin-vue": "^9.30.0",
     "flush-promises": "^1.0.2",
     "jsdom": "^25.0.1",
+    "playwright": "^1.49.0",
     "resize-observer-polyfill": "^1.5.1",
     "sass": "1.77.8",
     "sass-embedded": "^1.77.8",
