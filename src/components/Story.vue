@@ -10,7 +10,7 @@
           <span v-if="formattedDate" :title="formattedDate" data-test-id="formatted-date">
             <v-icon icon="mdi-clock-outline" /> {{ timeAgoString }}
           </span>
-          <span v-if="!isGridView" class="ml-5">
+          <span class="ml-5" v-if="!isGridView">
             <span title="Score" class="mr-5">
               <v-icon icon="mdi-star-circle" /> {{ storyDetails.score }}
             </span>
@@ -53,6 +53,8 @@
     storyId: Number,
     viewMode: String,
   });
+
+  const x = 'foo'
 
   const storyDetails = ref({});
   const loading = ref(true);
