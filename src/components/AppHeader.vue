@@ -8,7 +8,7 @@
 
     <v-btn icon="mdi-refresh" title="Get the latest posts" data-test-id="refresh-button" @click="emit('refresh')"></v-btn>
     <v-btn :icon="viewMode === 'Grid' ? 'mdi-list-box-outline' : 'mdi-grid'" :title="'Change to '+ inactiveView +' view'" data-test-id="view-button" @click="toggleView"></v-btn>
-    <v-btn :icon="inactiveTheme === 'dark' ? 'mdi-weather-sunny' : 'mdi-weather-night'" :title="'Change to ' + inactiveTheme + ' color scheme'" data-test-id="theme-button" @click="toggleTheme"></v-btn>
+    <v-btn :icon="inactiveTheme === 'dark' ? 'mdi-weather-night' : 'mdi-weather-sunny'" :title="'Change to ' + inactiveTheme + ' color scheme'" data-test-id="theme-button" @click="toggleTheme"></v-btn>
   </v-app-bar>
 </template>
 
