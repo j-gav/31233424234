@@ -2,11 +2,13 @@
   <v-select label="What type of posts would you like?" :items="storyTypes" :model-value="selectedType" @update:model-value="handleChangeType" />
 
   <v-infinite-scroll :items="visibleStories" :onLoad="showMore" :has-more="hasMore">
-    <v-row class="px-6">
-      <v-col v-for="story in visibleStories" :key="story" data-test-id="story-column" cols="12" :lg="isGridView ? 4 : 12" :md="isGridView ? 6 : 12">
-        <Story data-test-id="story-component" :story-id="story" :view-mode="viewMode" />
-      </v-col>
-    </v-row>
+    <v-container fluid>
+      <v-row>
+        <v-col v-for="story in visibleStories" :key="story" data-test-id="story-column" cols="12" :lg="isGridView ? 4 : 12" :md="isGridView ? 6 : 12">
+          <Story data-test-id="story-component" :story-id="story" :view-mode="viewMode" />
+        </v-col>
+      </v-row>
+    </v-container>
     <template #empty>
       <v-alert type="warning">No more posts to show.</v-alert>
     </template>
