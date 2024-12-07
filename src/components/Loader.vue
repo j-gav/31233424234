@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-12 mx-auto text-center" role="status" aria-live="polite" aria-label="Loading">
+  <div class="mt-12 mx-auto text-center" role="status" aria-label="Loading">
     <div class="lds-ripple">
       <div></div>
       <div></div>
