@@ -7,6 +7,9 @@
         <Story data-test-id="story-component" :story-id="story" :view-mode="viewMode" />
       </v-col>
     </v-row>
+    <template #empty>
+      <v-alert type="warning">No more posts to show.</v-alert>
+    </template>
   </v-infinite-scroll>
 </template>
 
