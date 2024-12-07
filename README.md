@@ -1,6 +1,6 @@
 ## Hacker News v3
 
- This project is developed using Vue 3 which is being bundled using Vite for high performance, I am using the [Vuetify](https://vuetifyjs.com/en/) component framework for the UI, this offers some nice features for handling infinite scroll which I am using as an alternative form of pagination for articles within the application. For unit tests I am using Vitest which is the recommended framework for testing Vue 3 applications. For e2e tests I am using Playwright, for linting I am using ESLint with the recommended settings for modern JS and Vue 3. For formatting I am using Prettier and I am using cspell to perform spellchecks on the repo. There are also a number of GitHub actions that are being run on pull requests.
+ This project is developed as a mobile first site using Vue 3 which is being bundled using Vite for high performance, I am using the [Vuetify](https://vuetifyjs.com/en/) component framework for the UI, this offers some nice features for handling infinite scroll which I am using as an alternative form of pagination for articles within the application. For unit tests I am using Vitest which is the recommended framework for testing Vue 3 applications. For e2e tests I am using Playwright, for linting I am using ESLint with the recommended settings for modern JS and Vue 3. For formatting I am using Prettier and I am using cspell to perform spellchecks on the repo. There are also a number of GitHub actions that are being run on pull requests.
 
  - Deployed to [https://j-gav.github.io/31233424234/](https://j-gav.github.io/31233424234/)
  
@@ -9,7 +9,7 @@
  - Requires NodeJS v18+
  - Install packages `npm i`
  - Run dev task `npm run dev`
- - Open [localhost](http://localhost:3000/)
+ - Open [http://localhost:3000/31233424234/](http://localhost:3000/31233424234/)
 
 ### Building the project
 - Run `npm run build`
@@ -35,8 +35,9 @@
 - Run `npm run lint`
 - Results will appear in console
 
-### Running spellcheck (TODO)
-- add description around cspell
+### Running spellcheck
+- Run `npm run spellcheck`
+- Results will appear in console
 
 ### Contributing
 - Open a PR to the main branch
