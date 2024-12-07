@@ -4,7 +4,7 @@
       <v-img src="@/assets/logo.png" alt="Hacker News Logo" />
     </v-avatar>
 
-    <v-app-bar-title>Hacker News V3 badddly spelled words</v-app-bar-title>
+    <v-app-bar-title>Hacker News V3</v-app-bar-title>
 
     <v-btn icon="mdi-refresh" title="Get the latest posts" data-test-id="refresh-button" @click="emit('refresh')"></v-btn>
     <v-btn :icon="viewMode === 'Grid' ? 'mdi-list-box-outline' : 'mdi-grid'" :title="'Change to '+ inactiveView +' view'" data-test-id="view-button" @click="toggleView"></v-btn>
