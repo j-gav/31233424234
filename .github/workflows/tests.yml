@@ -24,6 +24,9 @@ jobs:
       - name: Run ESLint
         run: npm run lint
 
+      - name: Run Spellcheck
+        run: npm run spellcheck
+
       - name: Run Vitest
         run: npm run ci-test
 
