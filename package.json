@@ -1,8 +1,10 @@
 {
-  "name": "vuetify-project",
+  "name": "hacker-news-v3",
+  "author": "John Gavin",
   "private": true,
   "type": "module",
   "version": "0.0.0",
+  "homepage": "https://j-gav.github.io/31233424234/",
   "scripts": {
     "ci-test:e2e": "playwright test --reporter=junit",
     "ci-test": "vitest run --coverage --coverage.enabled=true --reporter junit --outputFile=unit-test-results/test-output.json",
@@ -11,7 +13,9 @@
     "preview": "vite preview",
     "test": "vitest run --coverage --coverage.enabled=true",
     "test:e2e": "playwright test --reporter=html",
-    "lint": "eslint .  --max-warnings=0"
+    "lint": "eslint .  --max-warnings=0",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d dist"
   },
   "dependencies": {
     "@mdi/font": "7.4.47",
@@ -33,6 +37,7 @@
     "eslint-plugin-promise": "^6.4.0",
     "eslint-plugin-vue": "^9.30.0",
     "flush-promises": "^1.0.2",
+    "gh-pages": "^6.2.0",
     "jsdom": "^25.0.1",
     "playwright": "^1.49.0",
     "resize-observer-polyfill": "^1.5.1",
