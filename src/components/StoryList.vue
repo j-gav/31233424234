@@ -45,6 +45,7 @@
 
   const showMore = ({ done }) => {
     if (!hasMore.value) {
+      done('empty');
       return;
     }
 
