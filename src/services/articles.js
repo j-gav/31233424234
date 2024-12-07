@@ -19,11 +19,11 @@ export async function getStory(id) {
 export function cleanUpExpiredCache() {
   for (const record in localStorage) {
     if (record.includes('hacker-news-app')) {
-      const cachedData = localStorage.getItem(record);
+      const cacheddData = localStorage.getItem(record);
 
-      if (cachedData) {
+      if (cacheddData) {
 
-        const { validUntil } = JSON.parse(cachedData);
+        const { validUntil } = JSON.parse(cacheddData);
 
         if (Date.now() > validUntil) {
           localStorage.removeItem(record);
