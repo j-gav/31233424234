@@ -42,7 +42,7 @@
   };
 
   const toggleView = () => {
-    emit('change-view', inactiveView.value);
+    emit('change-view', inactiveView);
   };
 
   onMounted(() => {
